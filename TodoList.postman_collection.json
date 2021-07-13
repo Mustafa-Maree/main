@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "a7f178cf-1ec7-4439-a31f-50ad6afdf550",
+		"name": "TodoList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Todos",
+			"item": [
+				{
+					"name": "Create Todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZWNjODY4Y2EwZGUwMzJkMGUzNTQ3NiIsImlhdCI6MTYyNjEzMDczMSwiZXhwIjoxNjMzOTA2NzMxfQ.4jnZ6hdb276KcCiLUla7n_c6Dy1azerAjb6wO4-b3Eo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"paragraph\":\"new todo\",\r\n \"isCompleted\":0\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:2020/api/v1/todo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "2020",
+							"path": [
+								"api",
+								"v1",
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZWNjODY4Y2EwZGUwMzJkMGUzNTQ3NiIsImlhdCI6MTYyNjEzMDczMSwiZXhwIjoxNjMzOTA2NzMxfQ.4jnZ6hdb276KcCiLUla7n_c6Dy1azerAjb6wO4-b3Eo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"paragraph\":\"hello\",\r\n \"isCompleted\":0\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:2020/api/v1/todo/getById/60ecc3bc0d43da64683ff6a8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "2020",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"getById",
+								"60ecc3bc0d43da64683ff6a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZWNjODY4Y2EwZGUwMzJkMGUzNTQ3NiIsImlhdCI6MTYyNjEzMDczMSwiZXhwIjoxNjMzOTA2NzMxfQ.4jnZ6hdb276KcCiLUla7n_c6Dy1azerAjb6wO4-b3Eo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:2020/api/v1/todo/getAll",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "2020",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZWNjMmFkZGM0N2U5NmNjOGUwMWJiZCIsImlhdCI6MTYyNjEyOTA2OSwiZXhwIjoxNjMzOTA1MDY5fQ.Ydp7ASZz7Ko8Pg3t2OVxFBWkb_5_FPYCXp8s23Utk8Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paragraph\":\"hel2ox\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:2020/api/v1/todo/deleteById/60ecc3bc0d43da64683ff6a8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "2020",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"deleteById",
+								"60ecc3bc0d43da64683ff6a8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"email\":\"mr.dev1@gmail.com\",\r\n    \"password\":\"Most@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:2020/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "2020",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

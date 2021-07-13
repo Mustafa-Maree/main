@@ -17,7 +17,24 @@ exports.createTodo = async (req, res) => {
       });
     }
   };
-
+  exports.getAllTodo = async (req, res) => {
+    try {
+      const todo = await Todo.find ();
+      console.log(todo)
+      res.status (200).json ({
+        status: 'success',
+     
+        data: {
+            todo,
+        },
+      });
+    } catch (err) {
+      res.status (500).json ({
+        status: 'fail',
+        message: 'Bad request !',
+      });
+    }
+  };
 exports.getTodoById = async (req, res) => {
     try {
        const todo = await Todo.findById (req.params.id)
