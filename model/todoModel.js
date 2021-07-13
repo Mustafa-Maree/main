@@ -24,11 +24,10 @@ const todoSchema = new mongoose.Schema (
     },
    
   },
-  // object for options
+ 
   {
-    // fields can we defiend in our schema but that will not be persisted so will not be saved into database to save some space there
-    toJSON: {virtuals: true}, // each time data outputed as a json we want virtuals to be true the virtuals be part of output
-    toObject: {virtuals: true}, // each time data outputed as a object we want virtuals to be true the virtuals be part of output
+     toJSON: {virtuals: true},  
+    toObject: {virtuals: true}, 
   }
 );
  
